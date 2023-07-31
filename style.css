@@ -6,6 +6,17 @@ body {
     align-items: center;
 }
 
+.container {
+    background-color: #FF5E5B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 25px;
+}
+
 .grid {
     background-color: white;
     display: flex;

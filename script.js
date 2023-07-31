@@ -1,9 +1,10 @@
 const grid = document.querySelector(".grid");
 
-let gridSize = 400;
+let gridWidth = 40;
+let gridHeight = 30;
 let squareSize = 19;
-grid.style.width = (Math.sqrt(gridSize) * squareSize) + "px";
-console.log((Math.sqrt(gridSize)))
+grid.style.width = (gridWidth * squareSize) + "px";
+grid.style.height = (gridHeight * squareSize) + "px";
 
 function createGrid (gridSize) {
     for (i = 0; i < gridSize; i++) {
@@ -11,7 +12,8 @@ function createGrid (gridSize) {
         square.style.width = squareSize + "px";
         square.style.height = squareSize + "px";
         square.style.boxSizing = "border-box";
-        square.style.border = "solid grey 1px"
+        square.style.borderTop = "solid #AAAAAA 1px"
+        square.style.borderRight = "solid #AAAAAA 1px"
         square.onmouseover = () => {
             square.style.backgroundColor = "pink";
         };
@@ -19,11 +21,11 @@ function createGrid (gridSize) {
     }
 }
 
-createGrid(gridSize);
+createGrid(gridWidth * gridHeight);
 const button = document.querySelector("button");
 button.addEventListener('click', () => {
     while (grid.firstChild) {
         grid.removeChild(grid.firstChild);
     }
-    createGrid(gridSize);
+    createGrid(gridWidth * gridHeight);
 });
