@@ -12,8 +12,18 @@ function createGrid (gridSize) {
         square.style.height = squareSize + "px";
         square.style.boxSizing = "border-box";
         square.style.border = "solid grey 1px"
+        square.onmouseover = () => {
+            square.style.backgroundColor = "pink";
+        };
         grid.append(square);
     }
 }
 
 createGrid(gridSize);
+const button = document.querySelector("button");
+button.addEventListener('click', () => {
+    while (grid.firstChild) {
+        grid.removeChild(grid.firstChild);
+    }
+    createGrid(gridSize);
+});
