@@ -1,0 +1,13 @@
+body {
+    background-color: aqua;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
